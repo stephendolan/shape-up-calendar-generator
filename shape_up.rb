@@ -17,10 +17,10 @@ cycle_duration = (build_cycle_duration + cooldown_cycle_duration) * 7 # days
   cycle_number = i + 1
 
   build_cycle_start_date = start_date
-  build_cycle_end_date = build_cycle_start_date + 6 * 7 - 1 # 6 weeks
+  build_cycle_end_date = build_cycle_start_date + 6 * 7 - 2 # 6 weeks, omit last weekend
 
-  cooldown_cycle_start_date = build_cycle_end_date + 1
-  cooldown_cycle_end_date = cooldown_cycle_start_date + 2 * 7 - 1 # 2 weeks
+  cooldown_cycle_start_date = build_cycle_end_date + 2 # omit last weekend
+  cooldown_cycle_end_date = cooldown_cycle_start_date + 2 * 7 - 2 # 2 weeks, omit last weekend
 
   build_cycle_event = Icalendar::Event.new
   build_cycle_event.dtstart = build_cycle_start_date
