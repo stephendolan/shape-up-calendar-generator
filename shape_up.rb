@@ -26,7 +26,7 @@ cycle_duration = (build_cycle_duration + cooldown_cycle_duration) * 7 # days
   build_cycle_event.dtstart = build_cycle_start_date
   build_cycle_event.dtend = build_cycle_end_date
   build_cycle_event.summary = "Shape Up - Cycle #{cycle_number} Build"
-  build_cycle_event.description = "This the Cycle #{cycle_number} build phase from #{build_cycle_start_date} to #{build_cycle_end_date}."
+  build_cycle_event.description = "This is the Cycle #{cycle_number} build phase from #{build_cycle_start_date} to #{build_cycle_end_date}."
 
   cooldown_cycle_event = Icalendar::Event.new
   cooldown_cycle_event.dtstart = cooldown_cycle_start_date
