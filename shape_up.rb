@@ -2,7 +2,10 @@ require 'icalendar'
 require 'date'
 
 # Define the start date for the first Shape Up cycle
-start_date = Date.new(2023, 1, 2) # Change this to the desired start date for Cycle 1
+year = Time.now.year
+first_day_of_year = Date.new(year, 1, 1)
+first_monday_of_year = first_day_of_year + (8 - first_day_of_year.wday) % 7
+start_date = first_monday_of_year
 
 # Define the duration of each cycle
 build_cycle_duration = 6 # weeks
